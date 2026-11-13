@@ -1,0 +1,153 @@
+:root {
+  /* palette */
+  --color-main: hsl(20, 30%, 35%); /*hero, button */
+  --color-main-hover: hsl(20, 30%, 27%); /* button hover */
+  --color-dark: hsl(20, 20%, 15%); /* nav e footer */
+  --color-footer-link-hover: hsl(40, 30%, 90%); /*hover link*/
+  --bg-soft: #f8f9fa; /* sfondo sezione contatti */
+  /*ombra card*/
+  --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.08); 
+  --shadow-card-hover: 0 10px 24px rgba(0, 0, 0, 0.12);
+
+  /*variabili globali*/
+  --bs-primary: hsl(20, 30%, 35%);
+  --bs-primary-rgb: 116, 80, 62;
+  --bs-body-font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+
+.btn-primary {
+  --bs-btn-bg: var(--color-main);
+  --bs-btn-border-color: var(--color-main);
+  --bs-btn-hover-bg: var(--color-main-hover);
+  --bs-btn-hover-border-color: var(--color-main-hover);
+  --bs-btn-active-bg: var(--color-main-hover);
+  --bs-btn-active-border-color: var(--color-main-hover);
+  /* --bs-btn-focus-shadow-rgb: 116, 80, 62; */
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-main);
+  box-shadow: 0 0 0 0.25rem rgba(116, 80, 62, 0.25);
+}
+
+/* =========================================================
+   2. BASE
+   ========================================================= */
+html { 
+  scroll-behavior: smooth; 
+}
+
+/* navbar */
+.site-nav { 
+  background-color: var(--color-dark); 
+}
+
+/* hero*/
+.hero {
+  min-height: 80vh;
+  background-color: var(--color-main);
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.hero-title {
+  font-size: calc(1.4rem + 0.9vw);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-text { 
+  margin-bottom: 0; 
+}
+
+/* servizi */
+.section { 
+  padding: 3rem 0; 
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+
+.section-subtitle {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+.section-servizi { 
+  background-color: #fff; 
+  padding-bottom: 4rem; 
+}
+
+.service-card {
+  border: 0;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.service-card .card-body { 
+  padding: 1.5rem;
+ }
+
+.service-card .card-text { 
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.service-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.8rem;
+}
+
+/*contatti */
+.section-contatti { 
+  background-color: var(--bg-soft);
+}
+
+/* footer */
+.site-footer {
+  background-color: var(--color-dark);
+  color: #fff;
+  padding: 2.5rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.site-footer a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-footer a:hover{ 
+  color: var(--color-footer-link-hover);
+}
+
+.footer-copy {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .service-card { transition: none; }
+}
