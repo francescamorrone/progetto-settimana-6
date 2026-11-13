@@ -20,7 +20,7 @@ Per usarlo basta aprire `index.html` nel browser.
 
 <img src="assets/img/preview.png" alt="Anteprima di Atelier" width="600">
 
-🔗 **Demo live:** 
+🔗 **Demo live:** https://francescamorrone.github.io/progetto-settimana-6/
 
 ## 🧱 Versione base
 
